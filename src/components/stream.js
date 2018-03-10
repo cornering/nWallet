@@ -7,9 +7,8 @@ class Stream extends Component {
 
     render() {
         return (
-            <div>
-                
-            </div>
+            <p>
+            </p>
         );
     }
 }
