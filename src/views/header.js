@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
+import {Nav, NavItem} from 'react-bootstrap';
 
 class Header extends Component {
-    //TODO add header inside app.js
     render() {
+        //TODO move navigation to navigation component
         return (
-            <div className="App">
-                <header className="app-header">
-                    <h1 className="app-title">Welcome to React</h1>
-                </header>
-                <p className="app-intro">
-                    To get started, edit <code>src/app.js</code> and save to reload.
-                </p>
-            </div>
+            <header>
+                //TODO add logo and title
+                <Nav bsStyle="pills" activeKey={1} /*onSelect={handleSelect}*/>
+                    <NavItem eventKey={1} href="/home">
+                        NavItem 1 content
+                    </NavItem>
+                    <NavItem eventKey={2} title="Item">
+                        NavItem 2 content
+                    </NavItem>
+                    <NavItem eventKey={3} disabled>
+                        NavItem 3 content
+                    </NavItem>
+                </Nav>
+                <hr/>
+            </header>
         );
     }
 }

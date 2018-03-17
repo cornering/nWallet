@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
+import Header from './header';
+import Page from './page';
+
+import 'bootstrap/dist/css/bootstrap.css';
+import '../styles/views/app.css';
+
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="app-header">
-                    <h1 className="app-title">Welcome to React</h1>
-                </header>
-                <p className="app-intro">
-                    To get started, edit <code>src/app.js</code> and save to reload.
-                </p>
+            <div className="app">
+                <Header/>
+                <Page/>
             </div>
         );
     }
