@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PieChart from './chart';
 import '../styles/main.css';
 
 class Wallet extends Component {
@@ -9,8 +10,10 @@ class Wallet extends Component {
                     <h1 className="Wallet-title">Welcome to Wallet</h1>
                 </header>
                 <p className="Wallet-intro">
-                    To get started, edit <code>src/components/Wallet.js</code> and save to reload.
+                    {/* To get started, edit <code>src/components/Wallet.js</code> and save to reload. */}
                 </p>
+                <h2>EXPENSES </h2>
+                <PieChart />
             </div>
         );
     }
