@@ -6,3 +6,5 @@ import Wallet from './components/wallet';
 
 ReactDOM.render(<Wallet />, document.getElementById('root'));
 registerServiceWorker();
+
+
