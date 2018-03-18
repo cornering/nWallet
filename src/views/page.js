@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
+import {Route, Switch} from 'react-router-dom'
 
-class Header extends Component {
-    //TODO add page inside app.js, pages components insert here
+import Dashboard from './pages/dashboard'
+import Expenses from './pages/expenses'
+import Incomes from './pages/incomes'
+
+class Page extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="app-header">
-                    <h1 className="app-title">Welcome to React</h1>
-                </header>
-                <p className="app-intro">
-                    To get started, edit <code>src/app.js</code> and save to reload.
-                </p>
-            </div>
+            <Switch>
+                <Route exact path="/" component={Dashboard}/>
+                <Route path="/expenses" component={Expenses}/>
+                <Route path="/incomes" component={Incomes}/>
+            </Switch>
         );
     }
 }
 
-export default Header;
+export default Page;
