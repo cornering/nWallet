@@ -1,16 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 
 class Expenses extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="app-header">
-                    <h1 className="app-title">Welcome to React</h1>
-                </header>
-                <p className="app-intro">
-                    To get started, edit <code>src/app.js</code> and save to reload.
-                </p>
-            </div>
+            <div><h2>Expenses</h2></div>
         );
     }
 }

@@ -1,22 +1,29 @@
-import React, { Component } from 'react';
-import {Nav, NavItem} from 'react-bootstrap';
+import React, {Component} from 'react'
+import {Nav, NavItem} from 'react-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
 
 class Header extends Component {
     render() {
         //TODO move navigation to navigation component
+        //TODO add logo and title
         return (
             <header>
-                //TODO add logo and title
-                <Nav bsStyle="pills" activeKey={1} /*onSelect={handleSelect}*/>
-                    <NavItem eventKey={1} href="/home">
-                        NavItem 1 content
-                    </NavItem>
-                    <NavItem eventKey={2} title="Item">
-                        NavItem 2 content
-                    </NavItem>
-                    <NavItem eventKey={3} disabled>
-                        NavItem 3 content
-                    </NavItem>
+                <Nav bsStyle="pills">
+                    <LinkContainer to="/" exact={true}>
+                        <NavItem eventKey={1}>
+                            Dashboard
+                        </NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/expenses" exact={true}>
+                        <NavItem eventKey={2}>
+                            Expenses
+                        </NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/incomes" exact={true}>
+                        <NavItem eventKey={2}>
+                            Incomes
+                        </NavItem>
+                    </LinkContainer>
                 </Nav>
                 <hr/>
             </header>

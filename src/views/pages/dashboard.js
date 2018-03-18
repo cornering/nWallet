@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 
 class Dashboard extends Component {
-    //TODO add page inside app.js, pages components insert here
     render() {
         return (
             <div className="App">
