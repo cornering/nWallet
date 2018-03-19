@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import {Nav, NavItem} from 'react-bootstrap'
+import {Nav, NavItem,Navbar} from 'react-bootstrap'
 import {LinkContainer} from 'react-router-bootstrap'
+import '../styles/views/app.css';
 
 class Header extends Component {
     render() {
@@ -8,6 +9,9 @@ class Header extends Component {
         //TODO add logo and title
         return (
             <header>
+                <Navbar.Brand>
+                    <span className="logo">n</span><span className="second-word">Wallet</span>
+                </Navbar.Brand>
                 <Nav bsStyle="pills">
                     <LinkContainer to="/" exact={true}>
                         <NavItem eventKey={1}>
@@ -24,7 +28,7 @@ class Header extends Component {
                             Incomes
                         </NavItem>
                     </LinkContainer>
-                </Nav>
+                </Nav>  
                 <hr/>
             </header>
         );
