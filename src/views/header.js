@@ -1,17 +1,32 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
+import {Nav, NavItem} from 'react-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap'
 
 class Header extends Component {
-    //TODO add header inside app.js
     render() {
+        //TODO move navigation to navigation component
+        //TODO add logo and title
         return (
-            <div className="App">
-                <header className="app-header">
-                    <h1 className="app-title">Welcome to React</h1>
-                </header>
-                <p className="app-intro">
-                    To get started, edit <code>src/app.js</code> and save to reload.
-                </p>
-            </div>
+            <header>
+                <Nav bsStyle="pills">
+                    <LinkContainer to="/" exact={true}>
+                        <NavItem eventKey={1}>
+                            Dashboard
+                        </NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/expenses" exact={true}>
+                        <NavItem eventKey={2}>
+                            Expenses
+                        </NavItem>
+                    </LinkContainer>
+                    <LinkContainer to="/incomes" exact={true}>
+                        <NavItem eventKey={2}>
+                            Incomes
+                        </NavItem>
+                    </LinkContainer>
+                </Nav>
+                <hr/>
+            </header>
         );
     }
 }
