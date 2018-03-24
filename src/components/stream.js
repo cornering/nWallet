@@ -1,9 +1,14 @@
-import React, {Component} from 'react'
-
+import React, { Component } from 'react';
 class Stream extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {history: []};
+    }
+
     render() {
         return (
-            <div><h2>Incomes</h2></div>
+            <p>
+            </p>
         );
     }
 }
