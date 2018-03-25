@@ -1,0 +1,11 @@
+header .header-navbar {
+    min-height: 40px;
+    border-radius: 0;
+    border: none;
+    background-color: #32363e;
+}
+
+.header-navbar .navbar-nav > li > a {
+    height: 40px;
+    padding: 10px 15px;
+}
