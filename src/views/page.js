@@ -10,8 +10,8 @@ class Page extends Component {
         return (
             <Switch>
                 <Route exact path="/" component={Dashboard}/>
-                <Route path="/expenses" component={Expenses}/>
-                <Route path="/incomes" component={Incomes}/>
+                <Route exact path="/expenses" component={Expenses}/>
+                <Route exact path="/incomes" component={Incomes}/>
             </Switch>
         );
     }
