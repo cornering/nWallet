@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class Incomes extends Component {
+class IncomesPage extends Component {
     render() {
         return (
             <div><h2>Incomes</h2></div>
@@ -8,4 +8,4 @@ class Incomes extends Component {
     }
 }
 
-export default Incomes;
+export default IncomesPage;
