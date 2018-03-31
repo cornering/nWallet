@@ -1,5 +1,9 @@
 .page-container {
     background-color: #f1f2f6;
-    min-height: calc(100vh - 60px);
+    overflow: auto;
+    padding: 8px;
+    min-height: calc(100vh - 40px);
+    box-shadow: inset 4px 4px 6px 2px #ebeef1;
+    -moz-box-shadow: inset 4px 4px 6px 2px #ebeef1;
+    -webkit-box-shadow: inset 4px 4px 6px 2px #ebeef1;
 }
-
