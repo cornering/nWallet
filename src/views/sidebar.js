@@ -10,33 +10,41 @@ import logo from '../images/logo.png'
 
 class Sidebar extends Component {
 
-    componentDidMount() {
-        let trigger = $('.hamburger'),
-            isClosed = false;
+    trackMouse() {
+        $('#wrapper').toggleClass('toggled');
+      }
 
-        trigger.click(function () {
-            hamburger_cross();
-        });
+      untrackMouse() {
+        $('#wrapper').toggleClass('toggled');
+      }
+    // componentDidMount() {
+    //     let trigger = $('.hamburger'),
+    //         isClosed = false;
 
-        function hamburger_cross() {
-            if (isClosed === true) {
-                trigger.removeClass('is-open');
-                trigger.addClass('is-closed');
-                isClosed = false;
-            } else {
-                trigger.removeClass('is-closed');
-                trigger.addClass('is-open');
-                isClosed = true;
-            }
-        }
+    //     trigger.click(function () {
+    //         hamburger_cross();
+    //     });
 
-        $('[data-toggle="offcanvas"]').click(function () {
-            $('#wrapper').toggleClass('toggled');
-        });
-    }
+    //     function hamburger_cross() {
+    //         if (isClosed === true) {
+    //             trigger.removeClass('is-open');
+    //             trigger.addClass('is-closed');
+    //             isClosed = false;
+    //         } else {
+    //             trigger.removeClass('is-closed');
+    //             trigger.addClass('is-open');
+    //             isClosed = true;
+    //         }
+    //     }
+        
+    //     $('[data-toggle="offcanvas"]').click(function () {
+    //         $('#wrapper').toggleClass('toggled');
+    //     });
+    // }
+      
     render() {
         return (
-            <nav className="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <nav className="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" onMouseEnter={this.trackMouse} onMouseLeave={this.untrackMouse}>
                 <ul className="nav sidebar-nav">
                     <li className="sidebar-brand">
                         <Link className="logo-container" title="nWallet" to="/">
@@ -81,9 +89,9 @@ class Sidebar extends Component {
                         <a href="https://twitter.com/maridlcrmn">Follow me</a>
                     </li>
                     <li>
-                        <button type="button" className="hamburger is-closed" data-toggle="offcanvas">
+                        {/* <button type="button" className="hamburger is-closed" data-toggle="offcanvas">
                             Open
-                        </button>
+                        </button> */}
                     </li>
                 </ul>
             </nav>
