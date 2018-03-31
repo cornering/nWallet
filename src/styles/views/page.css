@@ -1,0 +1,5 @@
+.page-container {
+    background-color: #f1f2f6;
+    min-height: calc(100vh - 60px);
+}
+

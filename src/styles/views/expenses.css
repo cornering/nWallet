@@ -1,0 +1,8 @@
+.expenses-chart {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    -moz-box-shadow: 0px 0px 4px #c1c5d7;
+    -webkit-box-shadow: 0px 0px 4px #c1c5d7;
+    box-shadow: 0px 0px 4px #c1c5d7;
+}
