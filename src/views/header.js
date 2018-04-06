@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {Nav, NavItem, Navbar} from 'react-bootstrap'
-import {LinkContainer} from 'react-router-bootstrap'
+import React, { Component } from 'react'
+import { Nav, NavItem, Navbar } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 import '../styles/views/header.css'
 

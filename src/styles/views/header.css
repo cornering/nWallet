@@ -1,5 +1,6 @@
 header .header-navbar {
     min-height: 40px;
+    margin: 0;
     border-radius: 0;
     border: none;
     background-color: #32363e;
