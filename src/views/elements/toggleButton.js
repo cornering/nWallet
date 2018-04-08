@@ -6,7 +6,7 @@ const ToggleButtonElement = ({ className, toggled, onClick }) => {
     className = toggled ? className+' toggled' : className;
     return (
         <button className={className} onClick={e => { e.preventDefault(); onClick(); }}>
-            <FontAwesome name="arrow-right" size="2x"/>
+            <FontAwesome name="angle-right" size="2x"/>
         </button>
     )
 };
