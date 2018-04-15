@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Nav, NavItem, Navbar } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+import { Nav, /*NavItem,*/ Navbar } from 'react-bootstrap'
+/*import { LinkContainer } from 'react-router-bootstrap'*/
 
 import '../styles/views/header.css'
 
@@ -12,7 +12,7 @@ class Header extends Component {
             <header>
                 <Navbar fluid className="header-navbar">
                     <Nav bsStyle="pills">
-                        <LinkContainer to="/" exact={true}>
+                        {/*<LinkContainer to="/" exact={true}>
                             <NavItem eventKey={1}>
                                 Dashboard
                             </NavItem>
@@ -26,7 +26,7 @@ class Header extends Component {
                             <NavItem eventKey={2}>
                                 Incomes
                             </NavItem>
-                        </LinkContainer>
+                        </LinkContainer>*/}
                     </Nav>
                 </Navbar>
             </header>
