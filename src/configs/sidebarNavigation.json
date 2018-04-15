@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Expenses",
+      "path": "/expenses",
+      "icon": "briefcase"
+    },
+    {
+      "name": "Incomes",
+      "path": "/incomes",
+      "icon": "balance-scale"
+    }
+  ]
+}

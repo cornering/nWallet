@@ -34,6 +34,7 @@ body, html { height: 100%; }
     overflow-y: auto;
     overflow-x: hidden;
     background: #fff;
+    border: none;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -78,57 +79,58 @@ body, html { height: 100%; }
     width: 100%;
 }
 
-.sidebar-nav li:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    height: 100%;
-    width: 3px;
-    background-color: #1c1c1c;
-    -webkit-transition: width .2s ease-in;
-    -moz-transition:  width .2s ease-in;
-    -ms-transition:  width .2s ease-in;
-    transition: width .2s ease-in;
-
-}
-.sidebar-nav li.sidebar-brand a {
-    color: #fff;
-    background-color: #1a1a1a;
-}
-.sidebar-nav li:hover:before,
-.sidebar-nav li.open:hover:before {
-    width: 100%;
-    -webkit-transition: width .2s ease-in;
-    -moz-transition:  width .2s ease-in;
-    -ms-transition:  width .2s ease-in;
-    transition: width .2s ease-in;
-}
-
 .sidebar-nav li a {
     display: block;
-    color: #ddd;
+    color: #bbb;
     text-decoration: none;
     padding: 10px 15px 10px 30px;
 }
 
-.sidebar-nav li a:hover,
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus,
-.sidebar-nav li.open a:hover,
-.sidebar-nav li.open a:active,
-.sidebar-nav li.open a:focus{
-    color: #fff;
+.sidebar-nav > li.sidebar-link > a.active {
+    color: #008fe0;
+}
+
+.sidebar-nav > li.sidebar-link > a:hover,
+.sidebar-nav > li.sidebar-link > a:active,
+.sidebar-nav > li.sidebar-link > a:focus,
+.sidebar-nav > li.sidebar-link > .open a:hover,
+.sidebar-nav > li.sidebar-link > .open a:active,
+.sidebar-nav > li.sidebar-link > .open a:focus{
     text-decoration: none;
     background-color: transparent;
+}
+
+.sidebar-nav li.sidebar-link a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 3px;
+}
+
+.sidebar-nav > li.sidebar-link:hover a:before {
+    background-color: #bbb;
+}
+
+.sidebar-nav > li.sidebar-link > a.active:before {
+    background-color: #008fe0;
+}
+
+.sidebar-nav li.sidebar-brand a {
+    color: #fff;
+    background-color: #1a1a1a !important;
+    outline: 0;
 }
 
 .sidebar-nav > .sidebar-brand {
     height: 40px;
     font-size: 20px;
     line-height: 44px;
+    outline: 0;
 }
+
 .sidebar-nav .dropdown-menu {
     position: relative;
     width: 100%;
@@ -139,24 +141,29 @@ body, html { height: 100%; }
     background-color: #222;
     box-shadow: none;
 }
+
 .sidebar-brand > .logo-container {
     height: 40px;
     text-align: center;
     padding: 7px 0;
 }
+
 .logo-container > .logo-img {
     display: inline-block;
     width: 80px;
     text-align: center;
 }
+
 .logo-container > .logo-img > img {
     vertical-align: top;
 }
+
 .logo-container > .logo-text {
     display: inline-block;
     width: 100px;
     text-align: left;
 }
+
 .logo-container > .logo-text > h1 {
     display: inline-block;
     margin: 0;
@@ -164,12 +171,38 @@ body, html { height: 100%; }
     vertical-align: top;
 }
 
+.sidebar-nav > li.sidebar-link {
+    height: 50px;
+}
+
+.sidebar-nav > li.sidebar-link a {
+    padding: 0;
+    color: #666;
+}
+
+.sidebar-nav > li.sidebar-link .link-img {
+    float: left;
+    width: 80px;
+    text-align: center;
+    line-height: 14px;
+    padding: 11px 0;
+}
+
+.sidebar-nav > li.sidebar-link .link-text {
+    float: right;
+    width: 100px;
+    font-size: 16px;
+    line-height: 50px;
+}
+
 .toggleButton {
+    position: fixed;
+    bottom: 0;
+    left: 80px;
     display: block;
     height: 40px;
-    width: 80px;
-    padding-right: 20px;
-    padding-left: 0;
+    padding: 0;
+    width: 30px;
     border: none;
     background-color: transparent;
     color: #000;
@@ -180,9 +213,17 @@ body, html { height: 100%; }
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+.toggleButton:hover {
+    background-color: #fff;
+    box-shadow: 4px 4px 6px 1px #ebeef1;
+    -moz-box-shadow: 4px 4px 6px 1px #ebeef1;
+    -webkit-box-shadow: 4px 4px 6px 1px #ebeef1;
+}
+
 .toggleButton:focus {
     outline: 0;
 }
+
 .toggleButton span {
     vertical-align: middle;
     -webkit-transition: all 0.5s ease;
@@ -191,9 +232,7 @@ body, html { height: 100%; }
     transition: all 0.5s ease;
 }
 .toggleButton.toggled {
-    width: 40px;
-    padding-left: 130px;
-    padding-right: 0;
+    left: 180px;
 }
 .toggleButton.toggled span {
     transform: rotate(-180deg);
