@@ -1,19 +1,12 @@
 import React, {Component} from 'react';
 import {
-    ComposedChart,
-    VerticalComposedChart,
     LabelList,
     BarChart,
-    Line,
     Area,
     Bar,
     XAxis,
     YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    Cell,
-    Label
+    Cell
 } from 'recharts';
 
 const data = [
